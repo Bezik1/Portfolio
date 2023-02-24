@@ -1,0 +1,8 @@
+.canvas {
+  z-index: 2;
+  padding: 20px;
+  margin-left: 2%;
+  width: 30%;
+  height: 600px;
+  text-align: center;
+}
