@@ -1,25 +1,24 @@
-import BoxContainer from './components/Box/BoxContainer'
-import Typed from 'react-typed';
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 import './App.css';
-import { TYPED_BOX_STRINGS } from './constans';
 import Projects from './components/Projects';
+import NextSection from './components/NextSection';
+import { useState } from 'react';
+import IntroSection from './components/IntroSection';
+import { PATHS } from "./constans";
+import Blob from "./components/Blob";
 
 const App = () => {
-
     return (
       <div className="App">
-        <header>
-          <BoxContainer />
-          <Typed
-            strings={TYPED_BOX_STRINGS}
-            className='typed-box'
-            typeSpeed={40}
-            backSpeed={50}
-            loop 
-          />
-        </header>
-        <Projects />
+        <Blob />
+        <BrowserRouter>
+          <Routes>
+            <Route path={PATHS[0]} element={<IntroSection />} />
+            <Route path={PATHS[1]} element={<Projects />} />
+          </Routes>
+          <NextSection />
+        </BrowserRouter>
       </div>
     )
 }

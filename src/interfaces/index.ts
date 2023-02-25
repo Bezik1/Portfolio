@@ -21,6 +21,14 @@ interface WaveMaterial extends ShaderMaterial {
         u_active: {
             value: boolean
         }
+        u_intensity: {
+            type: string
+            value: number
+        }
+        u_mouse: {
+            type: string
+            value: number
+        }
     }
 }
 
@@ -36,3 +44,10 @@ export interface DemoProps {
     click: React.Dispatch<React.SetStateAction<boolean>>,
     clicked: boolean
 }
+
+export type PlaneGeometryArgs = [
+    width: number,
+    height: number,
+    widthSegments: number,
+    heightSegments: number
+]

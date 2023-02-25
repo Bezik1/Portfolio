@@ -1,8 +1,14 @@
 .canvas {
   z-index: 2;
-  padding: 20px;
-  margin-left: 2%;
+  margin-left: 10%;
   width: 30%;
-  height: 600px;
+  height: 99vh;
   text-align: center;
+}
+
+@media only screen and (max-width: 800px) {
+  .canvas {
+    width: 45%;
+    height: 75%;
+  } 
 }

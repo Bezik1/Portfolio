@@ -5,7 +5,7 @@ import { useRef } from 'react';
 import frag from "./shaders/frag";
 import vert from "./shaders/vert";
 
-import { BoxProps, Uniform } from '../../interfaces';
+import { BoxProps, PlaneGeometryArgs, Uniform } from '../../interfaces';
 
 const Box = ({ texture, position } : BoxProps) =>{
     const meshRef = useRef<Uniform>(null!)
@@ -22,18 +22,24 @@ const Box = ({ texture, position } : BoxProps) =>{
         texture1: { type: "sampler2D", value: texture },
     }
 
+    const geometryParams = [38.55, 31.02, 42.04, 168.17]
+    const ifWidth = window.innerWidth <= 750 ? 800 : window.innerWidth
+    const geometryArgs = geometryParams.map(param => ifWidth / param) as PlaneGeometryArgs
+
     return (
       <mesh
+        rotation={[0, Math.PI /10, 0]}
         position={position}
         ref={meshRef}
       >
-        <planeGeometry args={[38, 48, 24, 6]} />
+        <planeGeometry 
+          args={geometryArgs} 
+        /> 
         <shaderMaterial 
           side={THREE.DoubleSide}
           uniforms={uniforms}
           vertexShader={vert}
           fragmentShader={frag}
-          //wireframe={true}
         />
     </mesh>
     )

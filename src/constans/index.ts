@@ -4,9 +4,14 @@ export enum TEXTURE_URLS {
 
 const baseString = `I'm `
 export const TYPED_BOX_STRINGS = [
-    `Hi ${baseString} Mateusz!`,
+    `Hi ${baseString} Mateusz`,
     `${baseString} Frontend Developer`,
     `${baseString} Backend Developer`,
-    `I know Electron and React Native`,
+    `${baseString} from Poland`,
     `${baseString} Tennis Player`
+]
+
+export const PATHS = [
+    '/',
+    'projects',
 ]

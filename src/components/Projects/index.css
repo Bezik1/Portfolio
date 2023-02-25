@@ -1,9 +1,15 @@
+.projects {
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
 .projects h1 {
     margin: 0;
     margin-top: 75px;
     text-align: center;
     font-size: 15vw;
-    background-image: url('../../assets/text-image.webp');
+    background-image: url('../../assets/text-image.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-clip: text;

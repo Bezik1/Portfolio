@@ -1,0 +1,13 @@
+.next-section {
+    transition: .5s;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    border-radius: 50px;
+    border: 1px solid #fff;
+}
+
+.next-section:hover {
+    transition: .5s;
+    transform: translateY(-10px);
+}

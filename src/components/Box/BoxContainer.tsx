@@ -39,7 +39,7 @@ const BoxContainer = () =>{
             <Canvas>
               <group>
                   <Box 
-                      position={[0, 0, -35]} 
+                      position={[3, 0, -40]} 
                       texture={picture}
                   />
               </group>

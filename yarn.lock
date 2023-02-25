@@ -1616,7 +1616,7 @@
     "@react-spring/shared" "~9.7.0"
     "@react-spring/types" "~9.7.0"
 
-"@react-spring/core@~9.7.0":
+"@react-spring/core@^9.7.0", "@react-spring/core@~9.7.0":
   version "9.7.0"
   resolved "https://registry.yarnpkg.com/@react-spring/core/-/core-9.7.0.tgz#53b189d1a431f71023b3ed7728f5b154a72fd30a"
   integrity sha512-M+a1uNg0xdd1ZfjQJX+S1VwnPTC12Q4F/P03dwINkvdphaUF4Y2nXi8dmww+WB+LtjPA4qN4kBt8PJwe0RJNnw==
@@ -1649,7 +1649,7 @@
     "@react-spring/shared" "~9.7.0"
     "@react-spring/types" "~9.7.0"
 
-"@react-spring/types@~9.7.0":
+"@react-spring/types@^9.7.0", "@react-spring/types@~9.7.0":
   version "9.7.0"
   resolved "https://registry.yarnpkg.com/@react-spring/types/-/types-9.7.0.tgz#1b19f9c07bc3ecb2bc7a253ec100f122ace14199"
   integrity sha512-YEmhgtV7b6cNErxgYtlFpd/7N1EKV4IvxWjvLP3WVXi4xBhvBW7a3MCoHXzeTGbdWVK/YLnDh7BgJ542DwLZvg==

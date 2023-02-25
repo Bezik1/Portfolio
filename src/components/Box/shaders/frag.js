@@ -1,7 +1,7 @@
 const frag = 
 `
 uniform sampler2D texture1; 
-uniform sampler2D texture2; 
+uniform sampler2D texture2;
 varying vec2 vUv;
 
 void main() {
