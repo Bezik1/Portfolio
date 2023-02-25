@@ -1,6 +1,6 @@
 .next-section {
     transition: .5s;
-    position: absolute;
+    position: fixed;
     bottom: 5%;
     left: 50%;
     border-radius: 50px;

@@ -1,5 +1,3 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-
 import './App.css';
 import Projects from './components/Projects';
 import NextSection from './components/NextSection';
@@ -12,13 +10,9 @@ const App = () => {
     return (
       <div className="App">
         <Blob />
-        <BrowserRouter>
-          <Routes>
-            <Route path={PATHS[0]} element={<IntroSection />} />
-            <Route path={PATHS[1]} element={<Projects />} />
-          </Routes>
-          <NextSection />
-        </BrowserRouter>
+        <IntroSection />
+        <Projects />
+        <NextSection />
       </div>
     )
 }

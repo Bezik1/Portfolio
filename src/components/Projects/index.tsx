@@ -2,7 +2,7 @@ import './index.css'
 
 const Projects = () =>{
     return (
-        <section className="projects">
+        <section id="projects">
             <h1> My projects </h1>
             <div className='container'>
 

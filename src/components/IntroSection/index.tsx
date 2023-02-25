@@ -3,7 +3,7 @@ import Typed from "react-typed"
 import BoxContainer from "../Box/BoxContainer";
 
 const IntroSection = () =>(
-    <header>
+    <header id="intro-section">
         <BoxContainer />
           <Typed
             strings={TYPED_BOX_STRINGS}

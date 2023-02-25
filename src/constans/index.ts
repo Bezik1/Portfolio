@@ -12,6 +12,6 @@ export const TYPED_BOX_STRINGS = [
 ]
 
 export const PATHS = [
-    '/',
-    'projects',
+    '#intro-section',
+    '#projects',
 ]
