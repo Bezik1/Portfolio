@@ -1,5 +1,5 @@
 import { Canvas, useFrame } from "@react-three/fiber";
-import { useEffect, useMemo, useRef } from "react";
+import { useMemo, useRef, useState } from "react";
 import { MathUtils } from "three";
 import './index.css'
 
@@ -10,7 +10,7 @@ import { Uniform } from "../../interfaces";
 const BlobMesh = () => {
   // This reference will give us direct access to the mesh
   const mesh = useRef<Uniform>(null!);
-  const hover = useRef(false);
+  const [hover, setHover] = useState(false)
 
   const uniforms = useMemo(
     () => ({
@@ -26,12 +26,16 @@ const BlobMesh = () => {
     }),
     []
   );
-
+  /*
   useEffect(() =>{
-    window.addEventListener('mousemove', e =>{
-        mesh.current.material.uniforms.u_mouse.value = 0.01*e.clientX
-    })
+    document.addEventListener('mousemove', e =>
+        mesh.current.material.uniforms.u_intensity.value = 0.0005*(e.clientX / 2) + 0.3
+    )
+
+    return () => document.removeEventListener('mousemove', e => 
+      mesh.current.material.uniforms.u_intensity.value = 0.0005*(e.clientX / 2) + 0.3)
   })
+  */
 
   useFrame((state) => {
     const { clock } = state;
@@ -39,7 +43,7 @@ const BlobMesh = () => {
 
     mesh.current.material.uniforms.u_intensity.value = MathUtils.lerp(
       mesh.current.material.uniforms.u_intensity.value,
-      hover.current ? 0.65 : 0.15,
+      hover ? 0.65 : 0.15,
       0.02
     );
   });
@@ -49,8 +53,8 @@ const BlobMesh = () => {
       ref={mesh}
       position={[3, 0, 0]}
       scale={2}
-      onPointerOver={() => (hover.current = true)}
-      onPointerOut={() => (hover.current = false)}
+      onPointerOver={() => setHover(true)}
+      onPointerOut={() => setHover(false)}
     >
       <icosahedronGeometry args={[2, 40]} />
       <shaderMaterial
