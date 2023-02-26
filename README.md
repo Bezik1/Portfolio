@@ -8,6 +8,6 @@ Type in console `npm install`
 To run application type `npm start` \
 To build application type `npm run build`
 
-## :heavy_check_mark: Project Status
-Project deployed successfully \
+## :warning: Project Status
+Project is still in state of development \
 Current project: None
