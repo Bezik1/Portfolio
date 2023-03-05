@@ -2,6 +2,7 @@
   background-color: #1f1f1f;
   color: #fff;
   width: 100%;
+  padding-bottom: 25%;
   scroll-behavior: smooth;
 }
 
@@ -31,6 +32,25 @@ button, input[type="submit"], input[type="reset"] {
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #2c2c2c;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #7e7e7e;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
 }
 
 .typed-box {

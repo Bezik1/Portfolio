@@ -1,11 +1,12 @@
 import { Canvas, useFrame } from "@react-three/fiber";
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { MathUtils } from "three";
 import './index.css'
 
 import vertexShader from './shaders/vert';
 import fragmentShader from './shaders/frag';
 import { Uniform } from "../../interfaces";
+import gsap from "gsap";
 
 const BlobMesh = () => {
   // This reference will give us direct access to the mesh
@@ -43,7 +44,7 @@ const BlobMesh = () => {
 
     mesh.current.material.uniforms.u_intensity.value = MathUtils.lerp(
       mesh.current.material.uniforms.u_intensity.value,
-      hover ? 0.65 : 0.15,
+      hover ? 0.55 : 0.2 ,
       0.02
     );
   });
@@ -68,8 +69,22 @@ const BlobMesh = () => {
 };
 
 const Blob = () => {
+  const canvasRef = useRef<HTMLDivElement>(null!)
+
+  useEffect(() =>{
+    const tl = gsap.timeline({ delay: 1.5 })
+
+    tl.fromTo(canvasRef.current, {
+      opacity: 0,
+      x: -100,
+    }, {
+      x: 0,
+      opacity: 1,
+    })
+  }, [] )
+
   return (
-    <div className="blob">
+    <div className="blob" ref={canvasRef}>
         <Canvas camera={{ position: [0.0, 0.0, 8] }} className="blob-canvas">
             <BlobMesh />
         </Canvas>

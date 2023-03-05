@@ -6,6 +6,7 @@ const IntroSection = () =>(
     <header id="intro-section">
         <BoxContainer />
           <Typed
+            startDelay={2000}
             strings={TYPED_BOX_STRINGS}
             className='typed-box'
             typeSpeed={100}

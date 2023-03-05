@@ -19,17 +19,13 @@ const BoxContainer = () =>{
     const canvasRef = useRef(null!)
 
     useEffect(() =>{
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: canvasRef.current,
-            start: '50% 70%'
-            //markers: true
-          }
-        })
+        const tl = gsap.timeline({ delay: 1 })
     
         tl.fromTo(canvasRef.current, {
           opacity: 0,
+          y: -40,
         }, {
+          y: 10,
           opacity: 1,
         })
       }, [] )
