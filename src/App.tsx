@@ -1,5 +1,4 @@
 import './App.css';
-import Projects from './components/Projects';
 import NextSection from './components/NextSection';
 import IntroSection from './components/IntroSection';
 import Blob from "./components/Blob";
@@ -9,7 +8,6 @@ const App = () => {
       <div className="App">
         <Blob />
         <IntroSection />
-        <Projects />
         <NextSection />
       </div>
     )
