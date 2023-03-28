@@ -15,6 +15,11 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    gap: 20px;
+}
+
+.down {
+    margin-top: 10%;
 }
 
 .project {
@@ -30,6 +35,11 @@
     width: 50%;
     margin-left: 10%;
     margin-top: 2%;
+}
+
+.down-content {
+    margin-left: 0;
+    margin-right: 15%;
 }
 
 .project-content h3 {
@@ -52,6 +62,10 @@
     border-top: 4px solid #792525;
     height: 55vh;
     width: 52vw;
+}
+
+.project-content .down-ss {
+    border-color: #fff;
 }
 
 .project-content .project-ss img {
@@ -77,6 +91,11 @@
     border-radius: 50%;
     width: 25vw;
     height: 25vw;
+}
+
+.prawimy {
+    box-shadow: 0 0 10px #fafafa;
+    animation: none;
 }
 
 .project-cover:hover {

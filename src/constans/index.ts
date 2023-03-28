@@ -1,5 +1,7 @@
 import CITY_TOKEN_IMG from '../assets/city-token.png'
 import CITY_TOKEN_SS from '../assets/city-token-ss.png'
+import PRAWIMY_SS from '../assets/prawimy-ss.png'
+import PRAWIMY_LOGO from '../assets/prawimy-logo.png'
 
 export enum TEXTURE_URLS {
     pictureUrl = 'assets/picture.JPG',
@@ -8,6 +10,8 @@ export enum TEXTURE_URLS {
 export const IMAGES_PATH = {
     CITY_TOKEN_IMG,
     CITY_TOKEN_SS,
+    PRAWIMY_LOGO,
+    PRAWIMY_SS,
 }
 
 const baseString = `I'm `
